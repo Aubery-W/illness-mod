@@ -1,0 +1,156 @@
+object MainFrm: TMainFrm
+  Left = 270
+  Top = 113
+  Width = 952
+  Height = 691
+  BorderWidth = 2
+  Caption = 'HVRealtime'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  Menu = MainMenu1
+  OldCreateOrder = False
+  Position = poDesktopCenter
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnMouseDown = FormMouseDown
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 904
+    Top = 88
+    Width = 12
+    Height = 13
+    Caption = #31186
+  end
+  object Label2: TLabel
+    Left = 896
+    Top = 120
+    Width = 45
+    Height = 13
+    Caption = #28857#24179#22343'   '
+  end
+  object BitBtn1: TBitBtn
+    Left = 840
+    Top = 8
+    Width = 75
+    Height = 25
+    Caption = 'BitBtn1'
+    TabOrder = 0
+    OnClick = BitBtn1Click
+  end
+  object StatusBar: TStatusBar
+    Left = 0
+    Top = 591
+    Width = 941
+    Height = 25
+    BorderWidth = 1
+    Panels = <
+      item
+        BiDiMode = bdLeftToRight
+        ParentBiDiMode = False
+        Text = #37319#26679#39057#29575'::00.00'
+        Width = 100
+      end
+      item
+        Text = #20445#23384#25968#30446'::0000'
+        Width = 100
+      end
+      item
+        Text = 'BMP'#25991#20214#21517
+        Width = 100
+      end
+      item
+        Text = #22352#26631#20301#32622
+        Width = 180
+      end
+      item
+        Width = 220
+      end>
+    SimplePanel = False
+  end
+  object Btn_BmpProb: TBitBtn
+    Left = 840
+    Top = 48
+    Width = 75
+    Height = 25
+    Caption = 'Btn_BmpProb'
+    TabOrder = 2
+    OnClick = Btn_BmpProbClick
+  end
+  object Edit_TimeDelay: TEdit
+    Left = 840
+    Top = 83
+    Width = 57
+    Height = 21
+    TabOrder = 3
+    Text = '1200'
+  end
+  object Edit_NUM_SMOOTH: TEdit
+    Left = 840
+    Top = 112
+    Width = 57
+    Height = 21
+    TabOrder = 4
+    Text = '5'
+  end
+  object MainMenu1: TMainMenu
+    Left = 168
+    Top = 56
+    object Snap1: TMenuItem
+      Caption = 'Snap'
+      object Open1: TMenuItem
+        Caption = 'Open'
+        GroupIndex = 1
+        OnClick = Open1Click
+      end
+      object Start1: TMenuItem
+        Caption = 'Start'
+        GroupIndex = 1
+        OnClick = Start1Click
+      end
+      object Stop1: TMenuItem
+        Caption = 'Stop'
+        GroupIndex = 1
+        OnClick = Stop1Click
+      end
+      object Close1: TMenuItem
+        Caption = 'Close'
+        GroupIndex = 1
+        OnClick = Close1Click
+      end
+      object N1: TMenuItem
+        Caption = '-'
+        GroupIndex = 1
+      end
+      object Negative1: TMenuItem
+        Caption = 'Negative'
+        GroupIndex = 2
+        OnClick = Negative1Click
+      end
+    end
+    object N2: TMenuItem
+      Caption = 'SaveBmp'
+      object StartSave1: TMenuItem
+        Caption = 'StartSave'
+        OnClick = StartSave1Click
+      end
+      object StopSave1: TMenuItem
+        Caption = 'StopSave'
+        OnClick = StopSave1Click
+      end
+    end
+  end
+  object SaveDialog1: TSaveDialog
+    Left = 704
+    Top = 184
+  end
+  object OpenPictureDialog1: TOpenPictureDialog
+    Left = 704
+    Top = 288
+  end
+end
